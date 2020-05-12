@@ -25,8 +25,7 @@ def main():
 				taxonomy_name = line
 				print("%s&%s||"%(taxonomy_name.strip(), taxonomy_id))
 			except:
-				import traceback
-				traceback.print_exc()
+				print(sys.exc_info())
 
 
 		print()
