@@ -18,11 +18,16 @@ def main():
 		for line in f:
 			taxonomy_name = line.strip().replace(' ', "%20")
 			url  = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.cgi?db=taxonomy&term=%s"%(taxonomy_name)
-			res  = requests.get(url).text
-			root = ET.fromstring(res)
-			taxonomy_id   = root.find("IdList")[0].text
-			taxonomy_name = line
-			print("%s&%s||"%(taxonomy_name.strip(), taxonomy_id))
+			try:
+				res  = requests.get(url).text
+				root = ET.fromstring(res)
+				taxonomy_id   = root.find("IdList")[0].text
+				taxonomy_name = line
+				print("%s&%s||"%(taxonomy_name.strip(), taxonomy_id))
+			except:
+				import traceback
+				traceback.print_exc()
+
 
 		print()
 
