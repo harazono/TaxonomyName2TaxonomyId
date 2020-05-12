@@ -1,0 +1,13 @@
+Ailuropoda melanoleuca
+Anas platyrhynchos
+Bos taurus
+Bubalus bubalis
+Canis familiaris
+Capra hircus
+Equus caballus
+Equus ferus
+Gallus gallus
+Ovis aries
+Sus scrofa
+Macaca mulatta
+Oryctolagus cuniculus
